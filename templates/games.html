@@ -1,0 +1,110 @@
+{% load static %}
+<html>
+
+<head>
+  <title>SUKEBAN GAMES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+
+.valhallainfo
+{
+position:absolute;
+top:13%;
+}
+
+.nirvannainfo
+{
+position:absolute;
+top:57%;
+}
+
+nav ul ul {
+display: none;
+position: absolute;
+top: 12%;
+left:67%;
+}
+
+body{
+background-image: url("/static/img/stars.gif");
+background-repeat: repeat; 
+background-color: #000; 
+overflow-x: hidden; 
+}
+
+a 
+{ 
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+</style>
+</head>
+
+<body>
+ 
+
+<div class = "aboutheader" style="position:absolute; height:225%; top:113%;">
+<h1>SUKEBAN GAMES OFFICIAL WEBFRONT </h1>
+  <p><h2><em>Aim for the top!</em></h2></p>
+  <p>
+  <nav>
+  <ul class="menu">
+  <li class = "menuitem"><a href="/"><h3>Home</h3></a></li>
+  <li class = "menuitem"><a href="/about"><h3>About Us</h3></a> 
+  </li>
+  <li class = "menuitem"><a href="/games"><h3>Games</h3></a></li>  
+  <li class = "menuitem"><a href="#"><h3>Socials</h3></a>
+      <ul>
+      <li class="submenuitem"><a href="https://twitter.com/sukebangames" target="_blank">Twitter</a></li>
+      <li class="submenuitem"><a href="https://steamcommunity.com/groups/SukebanGames" target="_blank">Steam</a></li>
+      <li class="submenuitem"><a href="https://www.youtube.com/channel/UC3LBHWBF4kRiuOmzUSa5FMg" target="_blank">YouTube</a></li>
+      </ul>
+  </li>
+  </ul>
+  </nav>
+  </p>
+   
+   <div class="info">
+   <div class="valhallainfo">
+     <h1> VA-11 HALL-A: CYBERPUNK BARTENDER ACTION </h1>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/7x393waFKDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <p>
+     In this world, corporations reign supreme, all human life is infected with nanomachines designed to oppress them, 
+     and the terrifying White Knights ensure that everyone obeys the laws.
+
+     <br/><br/>But, this is not about those people.
+
+     <br/><br/>You are a bartender at VA-11 HALL-A, affectionately nicknamed "Valhalla." 
+     Although it is just a small bar downtown, it attracts the most fascinating people this side of dystopia. 
+     Keep your clients lubricated and you will be made privy to the most interesting stories.
+     </p>
+   </div>
+
+   <div class="nirvannainfo">
+    <h1>CYBERPUNK BARTENDER ACTION N1RVANNA – IN DEVELOPMENT, DATE TO BE ANNOUNCED</h1>
+    <img src="{% static 'img/nirvanna.jpg' %}" style="width:550px; height: auto;"/>   
+    <p>
+     A sequel to the critically acclaimed VA-11 Hall-A, Nirvana takes place in Saint Alicia, 
+     an artificial island located in the Caribbean that's experiencing a big economic boom and 
+     breakthroughs with technological advances in environmental climate control.
+
+     <br/><br/>This time around, we enter the world of Sam and Leon, a couple facing the challenges 
+     of living very different lives. Sam is a bartender at the Nirvana bar, where she serves all kinds 
+     of patrons looking for peace in this bustling megacity. Leon, on the other hand, is a gangster 
+     at a crossroads in life. Where should his allegiance lie? Family, or "family"?
+    </p>
+   </div>
+   </div>
+</div>
+
+ <a href="#" style="position:fixed;bottom:30px;right:50px;"> <img src="{% static 'img/arrow.gif' %}" style = "width:40px; height: auto;"/> </a>
+
+<script src="{% static 'js/gamesLang.js' %}"></script>
+  
+</body>
+
+</html>

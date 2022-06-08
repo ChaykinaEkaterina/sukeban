@@ -1,0 +1,88 @@
+{% load static %}
+<html>
+
+<head>
+  <title> ABOUT SUKEBAN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+
+.info
+{
+color: #ffffff;
+font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+nav ul ul {
+display: none;
+position: absolute;
+top: 27%;
+left:67%;
+}
+
+body{
+background-image: url("/static/img/stars.gif");
+background-repeat: repeat; 
+background-color: #000; 
+overflow-x: hidden;
+}
+
+a 
+{ 
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+</style>
+</head>
+
+<body>
+ 
+
+<div class = "aboutheader" style="position:absolute; height:100%; top:50%;">
+<h1>SUKEBAN GAMES OFFICIAL WEBFRONT </h1>
+  <p><h2><em>Aim for the top!</em></h2></p>
+  <p>
+  <nav>
+  <ul class="menu">
+  <li class = "menuitem"><a href="/"><h3>Home</h3></a></li>
+  <li class = "menuitem"><a href="/about"><h3>About Us</h3></a> 
+  </li>
+  <li class = "menuitem"><a href="/games"><h3>Games</h3></a></li>  
+  <li class = "menuitem"><a href="#"><h3>Socials</h3></a>
+      <ul>
+      <li class="submenuitem"><a href="https://twitter.com/sukebangames" target="_blank">Twitter</a></li>
+      <li class="submenuitem"><a href="https://steamcommunity.com/groups/SukebanGames" target="_blank">Steam</a></li>
+      <li class="submenuitem"><a href="https://www.youtube.com/channel/UC3LBHWBF4kRiuOmzUSa5FMg" target="_blank">YouTube</a></li>
+      </ul>
+  </li>
+  </ul>
+  </nav>
+  </p>
+   
+   <div class="info">
+   <p>
+   We are an independent game developer originally from Venezuela, now spread across the world looking for better horizons. Our work focuses on the intricacies of being alive. 
+   The name sort of means “delinquent boss girl”, and comes from 70’s japanese delinquent lingo and exploitation films from the era. It represents an attitude that aims to always be challenging, 
+   and a testament to an undying love for the pop culture that shaped our creative lives.
+   </p>
+   
+   <img src="{% static 'img/anna.gif' %}" style="width:530px; height: 190px;"/>   
+   <p>
+   <h4><em>Current team: </em></h4>
+   <ol>
+   <li>@kiririn51 (direction)</li>
+   <li>@juneji_ (music, sfx)</li>
+   <li>@merenge_doll (art)</li> 
+   <li>NewProgrammer (programming, no social media accounts)</li>
+   </ol>
+   </p>
+   </div>
+</div>
+
+<script src="{% static 'js/aboutLang.js' %}"></script>
+</body>
+
+</html>

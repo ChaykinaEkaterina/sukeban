@@ -1,0 +1,20 @@
+{% load static %}
+
+<style>
+body {
+  color: rgba(255, 255, 255);
+}
+  .comment-author {
+    color: #BB8BDD;
+  }
+</style>
+
+<div class="comment">
+        <div class="comment-body">
+            <span class="comment-author">{{ comment.author}}</span>: {{comment.text}}
+            <div class="post-datetime">
+                {{comment.datetime}}
+            </div>
+        </div>
+    </div>
+</div>

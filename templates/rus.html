@@ -1,0 +1,357 @@
+{% load static %}
+<html>
+
+<head>
+  <title> SUKEBAN GAMES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+
+  
+a 
+{ 
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sidemenu, .user {
+  text-transform: uppercase;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  list-style-type:none;
+  cursor: pointer;
+  pointer-events: none;
+  position: absolute;
+}
+.sidemenu:hover {
+  pointer-events: all;
+}
+.label {
+  display:list-item;
+  cursor: pointer;
+  pointer-events: all;
+}
+.spacer {
+  display:list-item;
+  width: 70px;
+  
+  cursor: pointer;
+  position: relative;
+}
+.spacer:before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #ffffff;
+  height: 1px;
+  width: 0%;
+  transition: width 0.25s ease;
+  transition-delay: 0.7s;
+}
+.item {
+  position: relative;
+  display:list-item;
+  margin: 5px;
+  top: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  transition-delay: 0;
+}
+
+.langitem {
+  position: relative;
+  display:list-item;
+  margin: 5px;
+  top: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  transition-delay: 0;
+}
+  
+span {
+  transition: color 0.5s ease;
+}
+.item:hover span {
+  color: #AC8EBF;
+}
+.sidemenu:hover .spacer:before {
+  width: 100%;
+  transition-delay: 0s;
+}
+.sidemenu:hover .item {
+  opacity: 1;
+  top: 0px;
+}
+.item:nth-child(1) {
+  transition-delay: 0.45s;
+}
+.item:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+
+.sidemenu:hover .item:nth-child(1) {
+  transition-delay: 0.25s;
+}
+.sidemenu:hover .item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+
+
+ @keyframes slide {
+    0% {
+        margin-left: -325px;
+    }
+    10% {
+        margin-left: -275px;
+    }
+    20% {
+        margin-left: -230px;
+    }
+    30% {
+        margin-left: -190px;
+    }
+    40% {
+        margin-left: -155px;
+    }
+    50% {
+        margin-left: -125px;
+    }
+    60% {
+        margin-left: -90px;
+    }
+    70% {
+        margin-left: -65px;
+    }
+    80% {
+        margin-left: -45px;
+    }
+    90% {
+        margin-left: -25px;
+    }
+    100% {
+        margin-left: -10px;
+    }
+} 
+.topic
+{
+animation:slide 1.5s;
+}
+
+.maintext
+{
+position:absolute;
+top:140%;
+width:100%;
+text-align:center;
+font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.textcols {
+	white-space: nowrap;
+}
+.textcols-item {
+        color: #ffffff;
+	white-space: normal;	
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+}
+.textcols .textcols-item:first-child {
+	margin-right: 4%;
+}
+
+
+
+.header
+{
+position:absolute;
+top:120%;
+left: 50%;
+/*right: 30%;*/
+transform: translate(-50%, -50%);
+text-align:center;
+}
+
+h1
+{
+color: #ffffff;
+font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+h2
+{
+color: #ffffff;
+font-family: 'Zen Kaku Gothic Antique', sans-serif;
+border-bottom:1px solid #BB8BDD;
+}
+
+h3
+{
+color: #a496f2;
+font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.center {
+  width: 700px; /*задаем ширину блока*/
+  height:130px; /*задаем высоту блока*/
+  transform: translate(-50%, -50%);
+  position: absolute; 
+  top: 65%; 
+  left: 50%;
+ }
+
+
+p {
+  margin-top: 0.1em; 
+  margin-bottom: 0.1em; 
+}
+
+nav ul ul {
+display: none;
+position: absolute;
+top: 90%;
+left:67%;
+z-index:99999999;  
+}
+
+body {
+  background-image: url("/static/img/jill2.gif");
+  background-repeat: no-repeat; 
+  background-color: #000; 
+  background-size: 100% auto; 
+  overflow-x: hidden;
+}
+
+</style>
+</head>
+
+<body>
+<script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script> 
+  
+<div class = "center">
+    <img src="{% static 'img/logoglitch.gif' %}" style = "width: 700px; height: 130px"  />
+</div>
+
+<div class = "header">
+<h1>SUKEBAN GAMES OFFICIAL WEBFRONT </h1>
+  <p><h2><em>Aim for the top!</em></h2></p>
+  <p>
+   <nav>
+  <ul class="menu">
+  <li class = "menuitem"><a href="/"><h3>Home</h3></a></li>
+  <li class = "menuitem"><a href="/about"><h3>About Us</h3></a></li>
+  <li class = "menuitem"><a href="/games"><h3>Games</h3></a></li>  
+  <li class = "menuitem"><a href="#"><h3>Socials</h3></a>
+      <ul>
+      <li class="submenuitem"><a href="https://twitter.com/sukebangames" target="_blank">Twitter</a></li>
+      <li class="submenuitem"><a href="https://steamcommunity.com/groups/SukebanGames" target="_blank">Steam</a></li>
+      <li class="submenuitem"><a href="https://www.youtube.com/channel/UC3LBHWBF4kRiuOmzUSa5FMg" target="_blank">YouTube</a></li>
+      </ul>
+  </li>
+  </ul>
+  </nav>
+  </p>
+</div>
+
+<div class="maintext">
+    <div class="textcols">
+	<div class="textcols-item">
+        <h1 class="topic"> 5-АЯ ГОДОВЩИНА VA11 HALL-A'S</h1>
+        <img src="{% static 'img/anniversary.png' %}" style = "width: 500px; height: auto"  />
+        <p><br/><br/>Эта игра изменила жизни множества людей по всему миру,
+у этой команды есть аудитория и все классные вещи, необходимые для создания большего 
+        игры в будущем.
+        <br/><br/>За это мы всегда будем вам благодарны.
+        </p>
+	</div>
+   <div class="textcols-item">
+        <h1 class="topic">РЕЛИЗ N1RV ANN-A ОТКЛАДЫВАЕТСЯ</h1>
+        <img src="{% static 'img/nirvanagif.gif' %}" style = "width: 500px; height: auto"  />
+        <p><br/><br/>Многие из вас, возможно, заметили, что у N1RV Ann-A была запланирована дата выхода
+в 2020 году, и что мы находимся в конце 2020 года без каких-либо объявлений по этому поводу.
+        <br/><br/>Что ж, вкратце это так: на данный момент мы меняем дату
+выхода N1RV Ann-A на неопределенный срок, и мы начнем смещать наше общественное внимание в сторону других проектов. 
+         Производство N1RV Ann-A не остановится и не замедлится, но какое-то время это также не будет нашим главным рекламным фокусом.
+
+         <br/><br/>Или для еще более короткой версии: дата выхода N1RV Ann-A теперь известна (когда это будет сделано), и в ближайшие месяцы у нас могут быть
+другие проекты, которые будут анонсированы раньше, чем N1RV Ann-A.</p>
+     <div class = "comments">
+       {% for post in posts %}
+             <h1> {{ post.title }} </h1> {{post.created}}
+             <p> {{ post.text }} </p>
+             <div id="comments-list-post-{{ post.id }}">
+
+              
+             {% for comment in post.comments.all %}
+               <div class ="comment">
+                {% include "comment.html" %} 
+                <!--
+                    {{ comment.author }}
+                    {{ comment.text }}
+                    {{ comment.created }}
+               -->
+               </div>
+             {% endfor %}
+               
+
+                </div>
+              <div>
+                  <input class="form-control form-control-sm comment-input" placeholder="Leave a comment" data-post-id="{{post.id}}">
+             </div>
+       {% endfor %}
+      </div>
+        </div>
+      </div>
+   </div>
+
+  <button class="open-button" onclick="openForm()">Feedback</button>
+
+<div class="form-popup" id="myForm">
+  <form class="form-container" >
+    <h3>Share your thoughts with us!</h3>
+
+    <label for="name" style = "color: #a496f2;"><b>Your name</b></label>
+    <input type="text" name="name">
+  
+  <label for="email" style = "color: #a496f2;" ><b>Your feedback</b></label>
+    <input type="text" name="text" required>
+
+    <button type="submit" class="btn">Share</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+  {% if request.user.is_authenticated %}
+      <div class = "sidemenu">
+      Hello, {{ request.user.username }}!
+      <br> <a href="/admin/logout/">Logout</a> </br>
+      </div>
+  {% else %}
+      <div class="sidemenu" style = "  top: 20px;
+  right: 15px;">
+      <div class="label">Join us</div>
+      <div class="spacer"  style="left: -60px" ></div>
+      <div class="item"><a href="{% url 'registration' %}""><span>Sign up</span></a></div>
+      <div class="item"><a href="{% url 'login' %}"><span>Log in</span></a></div>
+      </div>
+  {% endif %}
+
+  <!-- Меню языка -->
+  <div class="sidemenu" style=" position: absolute; top: 20px; left: 15px; list-style-type:none; text-align: left">
+  <div class="label" >Language</div>
+  <div class="spacer"></div>
+  <div class="item" onclick="changeLang('eng'); location.href= {% url 'home' %}"><span>eng</span></a></div>
+  <div class="item" onclick="changeLang('ru'); location.href= {% url 'rus' %}"><span>ru</span></a></div>
+</div>
+
+  <script src="{% static 'js/commenting.js' %}"></script>
+  <script src="{% static 'js/popup.js' %}"></script>
+  <script src="{% static 'js/indexLang.js' %}"></script> 
+
+</body>
+
+</html>

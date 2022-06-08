@@ -1,0 +1,129 @@
+{% load static %}
+
+<html>
+
+<head>
+  <title>SUKEBAN GAMES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+
+input[type="text"],
+input[type="password"],
+input[type="email"]
+{
+  background-color: #ffffff;
+  border: 1px solid #e5e5e4;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 8px 18px;
+  height: 48px;
+  width: 60%;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 16px;
+}
+
+input:invalid {
+  border: 1px solid #d9141d;
+  background-color: #fdd;
+}
+
+button {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 26px;
+  color: #FFF;
+  background-color: #AC8EBF;
+  border-radius: 4px;
+  border: 3px solid #BAB1BF;
+  text-align: center;
+  margin: 10px;
+  width: 60%;
+}
+
+label{
+  font-size: 16px;
+  color: #FFF;
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.registration
+{
+position:absolute;
+top:35%;
+width:100%;
+}
+
+nav ul ul {
+display: none;
+position: absolute;
+top: 27%;
+left:67%;
+}
+
+a 
+{ 
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body{
+background-image: url("/static/img/stars.gif");
+background-repeat: repeat; 
+background-color: #000; 
+overflow-x: hidden; 
+}
+
+</style>
+</head>
+
+<body>
+ 
+
+<div class = "aboutheader" style="position:absolute; height:100%; top:50%;">
+<h1>SUKEBAN GAMES OFFICIAL WEBFRONT </h1>
+  <p><h2><em>Aim for the top!</em></h2></p>
+  <p>
+  <nav>
+  <ul class="menu">
+  <li class = "menuitem"><a href="/"><h3>Home</h3></a></li>
+  <li class = "menuitem"><a href="/about"><h3>About Us</h3></a></li>
+  <li class = "menuitem"><a href="/games"><h3>Games</h3></a></li>  
+  <li class = "menuitem"><a href="#"><h3>Socials</h3></a>
+      <ul>
+      <li class="submenuitem"><a href="https://twitter.com/sukebangames" target="_blank">Twitter</a></li>
+      <li class="submenuitem"><a href="https://steamcommunity.com/groups/SukebanGames" target="_blank">Steam</a></li>
+      <li class="submenuitem"><a href="https://www.youtube.com/channel/UC3LBHWBF4kRiuOmzUSa5FMg" target="_blank">YouTube</a></li>
+      </ul>
+  </li>
+  </ul>
+  </nav>
+  </p>
+   
+
+   <div class="registration">
+      <img  src="{% static 'img/join.png' %}" style = "width: 220px; height: auto;  margin: 20px;"  />
+      <form action = "" class ="login_form" method = "POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Log-in"></p>
+       <!--
+      <div><input type="text" class="user_name" name="name" placeholder="Username"></div>
+      <div><input type="password" class="user_password" name="password" minlength="8" maxlength="20" placeholder="Password"></div>
+      <div><button type="submit" class="submitBtn">Log in</button> </div>  
+      -->
+      </form>
+   </div>
+
+</div>
+<!-- <script  src="{% static 'js/loginscript.js' %}"></script>
+ -->
+</body>
+
+</html>
